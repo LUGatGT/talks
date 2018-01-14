@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Qutebrowser and Keyboard Browsing</title>
+<meta name="author" content="(Jay Kamat)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Qutebrowser and Keyboard Browsing</h1><h2 class="author">Jay Kamat</h2><p class="date">Created: 2018-01-13 Sat 22:18</p>
+</section>
+
+<section>
+<section id="slide-org059a0c1">
+<h2 id="org059a0c1">Why Keyboard?</h2>
+<ul>
+<li>Much faster</li>
+<li>Fewer and less jarring context switches</li>
+<li>Better Ergonomics</li>
+<li>More enjoyable to use!</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org3c9dc5c">
+<h2 id="org3c9dc5c">A little History</h2>
+<ul>
+<li>Once upon a time, there were two primary choices
+<ul>
+<li>Vimperator</li>
+<li>Pentadanctyl</li>
+<li>(also dwb but ignore that)</li>
+
+</ul></li>
+<li>These managed to turn a previously mouse-based interface into a keyboard based one</li>
+
+</ul>
+</section>
+<section id="slide-org7a76925">
+<h3 id="org7a76925">Hinting</h3>
+
+<div class="figure">
+<p><img src="https://i.imgur.com/mSvFxDG.png" alt="mSvFxDG.png" />
+</p>
+</div>
+</section>
+<section id="slide-org0f2105b">
+<h3 id="org0f2105b">Completion</h3>
+
+<div class="figure">
+<p><img src="https://i.imgur.com/TrjrgVU.png" alt="TrjrgVU.png" />
+</p>
+</div>
+</section>
+<section id="slide-org6372c3c">
+<h3 id="org6372c3c">Customizable</h3>
+<ul>
+<li>Not exactly the best language, but it worked</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre  class="src src-vimrc"><span style="color: #5e6263; font-style: italic;">"</span><span style="color: #5e6263; font-style: italic;"> map settings I like</span>
+<span style="color: #598249;">map</span> H :<span style="color: #598249;">tabprevious</span><span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+<span style="color: #598249;">map</span> J :back<span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+<span style="color: #598249;">map</span> K :forward<span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+<span style="color: #598249;">map</span> L :<span style="color: #598249;">tabnext</span><span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+
+<span style="color: #5e6263; font-style: italic;">"</span><span style="color: #5e6263; font-style: italic;"> map moving tabs</span>
+<span style="color: #598249;">map</span> <span style="color: #15968D;">&lt;</span>A<span style="color: #15968D;">-</span>h<span style="color: #15968D;">&gt;</span> :<span style="color: #598249;">tabmove</span><span style="color: #15968D;">!</span> <span style="color: #87ceeb;">-1</span><span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+<span style="color: #598249;">map</span> <span style="color: #15968D;">&lt;</span>A<span style="color: #15968D;">-</span><span style="color: #598249;">l</span><span style="color: #15968D;">&gt;</span> :<span style="color: #598249;">tabmove</span><span style="color: #15968D;">!</span> <span style="color: #15968D;">+</span><span style="color: #87ceeb;">1</span><span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>
+
+<span style="color: #5e6263; font-style: italic;">"</span><span style="color: #5e6263; font-style: italic;"> Don't use F1</span>
+<span style="color: #598249;">map</span> <span style="color: #15968D;">&lt;</span>F1<span style="color: #15968D;">&gt;</span> <span style="color: #15968D;">&lt;</span>Esc<span style="color: #15968D;">&gt;</span>
+
+<span style="color: #5e6263; font-style: italic;">"</span><span style="color: #5e6263; font-style: italic;"> Re-enable bottom bar during certain commands.</span>
+<span style="color: #2F7BDE;">noremap</span> : :<span style="color: #2F7BDE;">js</span> <span style="color: #2F7BDE;">updateBottomBar</span>(false)<span style="color: #15968D;">&lt;</span>CR<span style="color: #15968D;">&gt;</span>:
+</pre>
+</div>
+</section>
+<section id="slide-org3a4488d">
+<h3 id="org3a4488d">Options on Chrome?</h3>
+<ul>
+<li>Vimium</li>
+<li>cVim</li>
+
+</ul>
+<p>
+Options were not as good&#x2026;
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgc363dec">
+<h2 id="orgc363dec">Firefox 57</h2>
+<ul>
+<li>Firefox 57 deprecated XUL addons!</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="https://i.imgur.com/CcfuwGb.png" alt="CcfuwGb.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3df6d53">
+<h2 id="org3df6d53">What Do I Pick?</h2>
+
+<div class="figure">
+<p><img src="https://i.imgur.com/bTAy31X.png" alt="bTAy31X.png" />
+</p>
+</div>
+</section>
+<section id="slide-orge92295b">
+<h3 id="orge92295b">Why Standalone</h3>
+<ul>
+<li>Standalone
+<ul>
+<li>Need to install a new browser, there will be setup.</li>
+<li>They can intercept all keys, and are not limited by being an extension (and
+will never break)</li>
+<li>Provide many features that browser extensions never can</li>
+
+</ul></li>
+<li>Browser Extensions
+<ul>
+<li>They work in your existing browser, easy to install</li>
+<li>Cannot work in new tab/setting pages</li>
+<li>Cannot intercept some keys (Ctrl-d, Ctrl-q)</li>
+<li>Do not work until a page has loaded</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org12e5198">
+<h3 id="org12e5198">Why Qutebrowser</h3>
+<ul>
+<li>Has multiple backends, pick between qtwebkit or qtwebengine (chromium)</li>
+<li>Has both a 'hands off' and a 'hands on' config language</li>
+<li>Comes with working native tabs by default, which you can turn off optionally.</li>
+<li>By far the most active of all the keyboard browsers, 2x as many contributors
+as the next most popular one.</li>
+<li>Self-documenting help system</li>
+<li>Extremely fast, fluid completion</li>
+<li>Userscripts - build your own commands in any language!</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgc50b49b">
+<h2 id="orgc50b49b">What about my extensions?</h2>
+<p>
+Overall, you'll need to put in a bit of time configuring things to be the way
+you'd like.
+</p>
+<ul>
+<li>Built in host-based adblocker</li>
+<li>Built in css override</li>
+<li>Userscripts</li>
+<li>Greasemonkey support</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgc11e4a4">
+<h2 id="orgc11e4a4">Demo!</h2>
+<ul>
+<li>Please ask questions (or feature requests) as things go along&#x2026;</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org5e2b868">
+<h2 id="org5e2b868">Possible Future Features</h2>
+<ul>
+<li>Per domain settings (for noscript and stylus like functionality)</li>
+<li>Caret mode in qtwebengine (<code>&lt;3</code>)</li>
+<li>Hinting support in iframes</li>
+<li>Tree style tabs?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org3b59719">
+<h2 id="org3b59719">Questions?</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.20,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'fast',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

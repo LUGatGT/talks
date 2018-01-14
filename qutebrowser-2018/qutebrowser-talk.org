@@ -1,0 +1,116 @@
+#+TITLE: Qutebrowser and Keyboard Browsing
+#+AUTHOR: Jay Kamat
+#+EMAIL: jaygkamat@gmail.com
+#+LANGUAGE: en
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
+#+REVEAL_SPEED: fast
+#+REVEAL_TRANS: linear
+#+REVEAL_MARGIN: 0.2
+#+OPTIONS: toc:nil num:nil
+
+* Why Keyboard?
+- Much faster
+- Fewer and less jarring context switches
+- Better Ergonomics
+- More enjoyable to use!
+
+* A little History
+- Once upon a time, there were two primary choices
+  + Vimperator
+  + Pentadanctyl
+  + (also dwb but ignore that for now)
+- These managed to turn a previously mouse-based interface into a keyboard based one
+** Hinting
+[[https://i.imgur.com/mSvFxDG.png]]
+** Completion
+[[https://i.imgur.com/TrjrgVU.png]]
+** Customizable
+- Not exactly the best language, but it worked
+#+BEGIN_SRC vimrc
+  " map settings I like
+  map H :tabprevious<CR>
+  map J :back<CR>
+  map K :forward<CR>
+  map L :tabnext<CR>
+
+  " map moving tabs
+  map <A-h> :tabmove! -1<CR>
+  map <A-l> :tabmove! +1<CR>
+
+  " Don't use F1
+  map <F1> <Esc>
+
+  " Re-enable bottom bar during certain commands.
+  noremap : :js updateBottomBar(false)<CR>:
+#+END_SRC
+** Options on Chrome?
+- Vimium
+- cVim
+Options were not as good...
+* Firefox 57
+- Firefox 57 deprecated XUL addons!
+
+[[https://i.imgur.com/CcfuwGb.png]]
+
+* What Do I Pick?
+[[https://i.imgur.com/bTAy31X.png]]
+** Why Standalone
+- Standalone
+  - Need to install a new browser, there will be setup.
+  - They can intercept all keys, and are not limited by being an extension (and
+    will never break)
+  - Provide many features that browser extensions never can
+- Browser Extensions
+  - They work in your existing browser, easy to install
+  - Cannot work in new tab/setting pages
+  - Cannot intercept some keys (Ctrl-d, Ctrl-q)
+  - Do not work until a page has loaded
+** Why Qutebrowser
+- Has multiple backends, pick between qtwebkit or qtwebengine (chromium)
+- Has both a 'hands off' and a 'hands on' config language
+- Comes with working native tabs by default, which you can turn off optionally.
+- By far the most active of all the keyboard browsers, 2x as many contributors
+  as the next most popular one.
+- Self-documenting help system
+- Extremely fast, fluid completion
+- Userscripts - build your own commands in any language!
+* What about my extensions?
+Overall, you'll need to put in a bit of time configuring things to be the way
+you'd like.
+- Built in host-based adblocker
+- Built in css override
+- Userscripts
+- Greasemonkey support
+* Demo!
+- Please ask questions (or feature requests) as things go along...
+
+** Stuff to Go Over                                               :noexport:
+*** Basic Browsing
+- ~:open (-t)~
+- completion
+- bookmarks/quickmarks
+- tab management
+- ~:buffer~ alternative
+- downloads
+*** Intermediate Configuration
+- Move tabbar to side
+- Hide tabbar/statusbar when not tabbing
+- Change colors of everything
+- ~autoconfig.yml~ vs ~config.py~
+*** Cool Settings
+- lock fullscreen videos down to the page (~content.windowed_fullscreen~)
+- searchengines, goes well with ddg bangs
+*** Advanced Features
+- ~:spawn~ to launch mpv on youtube
+- readability userscript
+- launch an external editor
+- build a js cycler userscript
+
+* Possible Future Features
+- Per domain settings (for noscript and stylus like functionality)
+- Caret mode in qtwebengine (~<3~)
+- Hinting support in iframes
+- Tree style tabs?
+
+* Questions?
