@@ -109,8 +109,7 @@ you'd like.
 
 * Possible Future Features
 - Per domain settings (for noscript and stylus like functionality)
-- Caret mode in qtwebengine (~<3~)
-- Hinting support in iframes
 - Tree style tabs?
+- What do you want in a browser?
 
 * Questions?
