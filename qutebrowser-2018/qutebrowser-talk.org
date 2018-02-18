@@ -61,17 +61,20 @@ Options were not as good...
   - They can intercept all keys, and are not limited by being an extension (and
     will never break)
   - Provide many features that browser extensions never can
+  - Much more customization that a standard browser
 - Browser Extensions
   - They work in your existing browser, easy to install
   - Cannot work in new tab/setting pages
   - Cannot intercept some keys (Ctrl-d, Ctrl-q)
   - Do not work until a page has loaded
+  - Many more choices between browser extensions
 ** Why Qutebrowser
 - Has multiple backends, pick between qtwebkit or qtwebengine (chromium)
 - Has both a 'hands off' and a 'hands on' config language
-- Comes with working native tabs by default, which you can turn off optionally.
+- Cross platform, works on Linux/Win/Mac!
 - By far the most active of all the keyboard browsers, 2x as many contributors
   as the next most popular one.
+  - Working actively with upstream qt to resolve backend bugs
 - Self-documenting help system
 - Extremely fast, fluid completion
 - Userscripts - build your own commands in any language!
@@ -105,6 +108,7 @@ you'd like.
 - ~:spawn~ to launch mpv on youtube
 - readability userscript
 - launch an external editor
+- *unreleased:* caret mode for selection
 - build a js cycler userscript
 
 * Possible Future Features
