@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Qutebrowser and Keyboard Browsing</title>
+<title>qutebrowser and Keyboard Browsing</title>
 <meta name="author" content="(Jay Kamat)"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
@@ -26,12 +26,12 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Qutebrowser and Keyboard Browsing</h1><h2 class="author">Jay Kamat</h2><p class="date">Created: 2018-02-14 Wed 16:48</p>
+<section id="sec-title-slide"><h1 class="title">qutebrowser and Keyboard Browsing</h1><h2 class="author">Jay Kamat</h2><p class="date">Created: 2018-02-22 Thu 01:28</p>
 </section>
 
 <section>
-<section id="slide-org1e6cb61">
-<h2 id="org1e6cb61">Why Keyboard?</h2>
+<section id="slide-org6e532be">
+<h2 id="org6e532be">Why Keyboard?</h2>
 <ul>
 <li>Much faster</li>
 <li>Fewer and less jarring context switches</li>
@@ -43,8 +43,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org0afbf78">
-<h2 id="org0afbf78">A little History</h2>
+<section id="slide-orgde696cf">
+<h2 id="orgde696cf">A little History</h2>
 <ul>
 <li>Once upon a time, there were two primary choices
 <ul>
@@ -57,24 +57,24 @@
 
 </ul>
 </section>
-<section id="slide-org135f056">
-<h3 id="org135f056">Hinting</h3>
+<section id="slide-orge8aad68">
+<h3 id="orge8aad68">Hinting</h3>
 
 <div class="figure">
 <p><img src="https://i.imgur.com/mSvFxDG.png" alt="mSvFxDG.png" />
 </p>
 </div>
 </section>
-<section id="slide-org2afcb0e">
-<h3 id="org2afcb0e">Completion</h3>
+<section id="slide-orgbc8b180">
+<h3 id="orgbc8b180">Completion</h3>
 
 <div class="figure">
 <p><img src="https://i.imgur.com/TrjrgVU.png" alt="TrjrgVU.png" />
 </p>
 </div>
 </section>
-<section id="slide-org741a18b">
-<h3 id="org741a18b">Customizable</h3>
+<section id="slide-org073de9e">
+<h3 id="org073de9e">Customizable</h3>
 <ul>
 <li>Not exactly the best language, but it worked</li>
 
@@ -99,8 +99,8 @@
 </pre>
 </div>
 </section>
-<section id="slide-org057aa66">
-<h3 id="org057aa66">Options on Chrome?</h3>
+<section id="slide-orge6d082d">
+<h3 id="orge6d082d">Options on Chrome?</h3>
 <ul>
 <li>Vimium</li>
 <li>cVim</li>
@@ -112,8 +112,8 @@ Options were not as good&#x2026;
 </section>
 </section>
 <section>
-<section id="slide-org07c68dd">
-<h2 id="org07c68dd">Firefox 57</h2>
+<section id="slide-org2e6bbb4">
+<h2 id="org2e6bbb4">Firefox 57</h2>
 <ul>
 <li>Firefox 57 deprecated XUL addons!</li>
 
@@ -128,16 +128,16 @@ Options were not as good&#x2026;
 </section>
 </section>
 <section>
-<section id="slide-org8ab5909">
-<h2 id="org8ab5909">What Do I Pick?</h2>
+<section id="slide-org892ab3f">
+<h2 id="org892ab3f">What Do I Pick?</h2>
 
 <div class="figure">
 <p><img src="https://i.imgur.com/bTAy31X.png" alt="bTAy31X.png" />
 </p>
 </div>
 </section>
-<section id="slide-org66ef0fa">
-<h3 id="org66ef0fa">Why Standalone</h3>
+<section id="slide-org0938c15">
+<h3 id="org0938c15">Why Standalone</h3>
 <ul>
 <li>Standalone
 <ul>
@@ -145,6 +145,7 @@ Options were not as good&#x2026;
 <li>They can intercept all keys, and are not limited by being an extension (and
 will never break)</li>
 <li>Provide many features that browser extensions never can</li>
+<li>Much more customization that a standard browser</li>
 
 </ul></li>
 <li>Browser Extensions
@@ -153,19 +154,24 @@ will never break)</li>
 <li>Cannot work in new tab/setting pages</li>
 <li>Cannot intercept some keys (Ctrl-d, Ctrl-q)</li>
 <li>Do not work until a page has loaded</li>
+<li>Many more choices between browser extensions</li>
 
 </ul></li>
 
 </ul>
 </section>
-<section id="slide-orgf6965d2">
-<h3 id="orgf6965d2">Why Qutebrowser</h3>
+<section id="slide-orgc4511d6">
+<h3 id="orgc4511d6">Why Qutebrowser</h3>
 <ul>
 <li>Has multiple backends, pick between qtwebkit or qtwebengine (chromium)</li>
 <li>Has both a 'hands off' and a 'hands on' config language</li>
-<li>Comes with working native tabs by default, which you can turn off optionally.</li>
+<li>Cross platform, works on Linux/Win/Mac!</li>
 <li>By far the most active of all the keyboard browsers, 2x as many contributors
-as the next most popular one.</li>
+as the next most popular one.
+<ul>
+<li>Working actively with upstream qt to resolve backend bugs</li>
+
+</ul></li>
 <li>Self-documenting help system</li>
 <li>Extremely fast, fluid completion</li>
 <li>Userscripts - build your own commands in any language!</li>
@@ -174,24 +180,65 @@ as the next most popular one.</li>
 </section>
 </section>
 <section>
-<section id="slide-org4f65bcf">
-<h2 id="org4f65bcf">What about my extensions?</h2>
-<p>
-Overall, you'll need to put in a bit of time configuring things to be the way
+<section id="slide-orga9db63f">
+<h2 id="orga9db63f">What about my extensions?</h2>
+<ul>
+<li>Overall, you'll need to put in a bit of time configuring things to be the way
 you'd like.
-</p>
 <ul>
 <li>Built in host-based adblocker</li>
 <li>Built in css override</li>
 <li>Userscripts</li>
 <li>Greasemonkey support</li>
+<li>(NEW!) Per Domain Settings!</li>
+
+</ul></li>
 
 </ul>
 </section>
+<section id="slide-orgb41a258">
+<h3 id="orgb41a258">But <b><span class="underline">EXTENSIONS</span></b></h3>
+<ul>
+<li>qutebrowser can do everything that extensions can do and <b>more</b>!</li>
+<li>You just might have to put in a bit of work&#x2026;</li>
+<li>You will probably find your needs are built in, or in an existing userscript.</li>
+<li>If your 'must have' extension is closed source, probably tough luck&#x2026;</li>
+
+</ul>
+</section>
+<section id="slide-org599c884">
+<h3 id="org599c884">Examples</h3>
+<ul>
+<li>Most popular extension <a href="http://www.skipser.com/p/2/p/most-popular-chrome-extensions.html">checklist</a>
+<ol>
+<li class="on"><code>[X]</code> block ads/js</li>
+<li class="off"><code>[&#xa0;]</code> be avast</li>
+<li class="on"><code>[X]</code> Quickly Access/Bookmark Sites</li>
+<li class="on"><code>[X]</code> Create PDFs</li>
+<li class="on"><code>[X]</code> fill <code>pass</code> words with <code>password_fill</code></li>
+<li class="on"><code>[X]</code> set custom stylesheets</li>
+<li class="on"><code>[X]</code> Proxy Connection</li>
+<li class="off"><code>[&#xa0;]</code> Inline Translations (easy userscript)</li>
+<li class="off"><code>[&#xa0;]</code> Become IE</li>
+<li class="on"><code>[X]</code> download youtube videos</li>
+
+</ol></li>
+
+</ul>
+</section>
+<section id="slide-orgd9fe3ed">
+<h3 id="orgd9fe3ed">Customization Power Chart</h3>
+
+<div class="figure">
+<p><img src="https://i.imgur.com/m9VHtP5.png" alt="m9VHtP5.png" />
+</p>
+</div>
+
+</section>
 </section>
 <section>
-<section id="slide-org19b8054">
-<h2 id="org19b8054">Demo!</h2>
+<section id="slide-orgbd6a3de">
+<h2 id="orgbd6a3de">Demo!</h2>
 <ul>
 <li>Please ask questions (or feature requests) as things go along&#x2026;</li>
 
@@ -200,20 +247,23 @@ you'd like.
 </section>
 </section>
 <section>
-<section id="slide-orgbb4cafb">
-<h2 id="orgbb4cafb">Possible Future Features</h2>
+<section id="slide-org3cc441b">
+<h2 id="org3cc441b">Possible Future Features</h2>
 <ul>
-<li>Per domain settings (for noscript and stylus like functionality)</li>
-<li>Tree style tabs?</li>
-<li>What do you want in a browser?</li>
+<li><del>Caret Mode for selection</del></li>
+<li><del>Per domain settings (for noscript and stylus like functionality)</del></li>
+<li>Tree style tabs!</li>
+<li>Tab Grouping/Sorting?</li>
+<li>Python Api!</li>
+<li>What do <b>you</b> want in a browser?</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-org300f5c8">
-<h2 id="org300f5c8">Questions?</h2>
+<section id="slide-orgfd3d873">
+<h2 id="orgfd3d873">Questions?</h2>
 </section>
 </section>
 </div>

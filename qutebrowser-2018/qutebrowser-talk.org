@@ -1,4 +1,4 @@
-#+TITLE: Qutebrowser and Keyboard Browsing
+#+TITLE: qutebrowser and Keyboard Browsing
 #+AUTHOR: Jay Kamat
 #+EMAIL: jaygkamat@gmail.com
 #+LANGUAGE: en
@@ -79,12 +79,33 @@ Options were not as good...
 - Extremely fast, fluid completion
 - Userscripts - build your own commands in any language!
 * What about my extensions?
-Overall, you'll need to put in a bit of time configuring things to be the way
-you'd like.
-- Built in host-based adblocker
-- Built in css override
-- Userscripts
-- Greasemonkey support
+- Overall, you'll need to put in a bit of time configuring things to be the way
+  you'd like.
+  + Built in host-based adblocker
+  + Built in css override
+  + Userscripts
+  + Greasemonkey support
+  + (NEW!) Per Domain Settings!
+** But *_EXTENSIONS_*
+- qutebrowser can do everything that extensions can do and *more*!
+- You just might have to put in a bit of work...
+- You will probably find your needs are built in, or in an existing userscript.
+- If your 'must have' extension is closed source, probably tough luck...
+** Examples
+- Most popular extension [[http://www.skipser.com/p/2/p/most-popular-chrome-extensions.html][checklist]]
+  1. [X] block ads/js
+  2. [ ] be avast
+  3. [X] Quickly Access/Bookmark Sites
+  4. [X] Create PDFs
+  5. [X] fill ~pass~ words with ~password_fill~
+  6. [X] set custom stylesheets
+  7. [X] Proxy Connection
+  8. [ ] Inline Translations (easy userscript)
+  9. [ ] Become IE
+  10. [X] download youtube videos
+** Customization Power Chart
+[[https://i.imgur.com/m9VHtP5.png]]
+
 * Demo!
 - Please ask questions (or feature requests) as things go along...
 
@@ -112,8 +133,11 @@ you'd like.
 - build a js cycler userscript
 
 * Possible Future Features
-- Per domain settings (for noscript and stylus like functionality)
-- Tree style tabs?
-- What do you want in a browser?
+- +Caret Mode for selection+
+- +Per domain settings (for noscript and stylus like functionality)+
+- Tree style tabs!
+- Tab Grouping/Sorting?
+- Python Api!
+- What do *you* want in a browser?
 
 * Questions?
