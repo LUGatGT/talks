@@ -1,2 +1,2 @@
 # talks
-all of the talks given at LUG@GT
+a very incomplete repo of the talks given at LUG@GT
